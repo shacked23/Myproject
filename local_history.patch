@@ -1,0 +1,931 @@
+Index: app/src/main/java/com/example/myproject/User.java
+===================================================================
+--- app/src/main/java/com/example/myproject/User.java	(date 0)
++++ app/src/main/java/com/example/myproject/User.java	(date 0)
+@@ -1,81 +0,0 @@
+-package com.example.myproject;
+-
+-import android.widget.TextView;
+-
+-public class User {
+-    private String  id;
+-    private String name;
+-    private String firstName;
+-    private String data;
+-    private String helath;
+-    private String gender;
+-    private String phoneNumber;
+-    public User(){
+-
+-    }
+-    public User(String  id,String name,String firstName,String data,String helath,String gender,String phoneNumber){
+-        this.id=id;
+-        this.name=name;
+-        this.firstName=firstName;
+-        this.data=data;
+-        this.helath=helath;
+-        this.gender=gender;
+-        this.phoneNumber=phoneNumber;
+-    }
+-
+-    public String getId() {
+-        return id;
+-    }
+-
+-    public void setId(String id) {
+-        this.id = id;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public String getFirstName() {
+-        return firstName;
+-    }
+-
+-    public void setFirstName(String firstName) {
+-        this.firstName = firstName;
+-    }
+-
+-    public String getData() {
+-        return data;
+-    }
+-
+-    public void setData(String data) {
+-        this.data = data;
+-    }
+-
+-    public String getHelath() {
+-        return helath;
+-    }
+-
+-    public void setHelath(String helath) {
+-        this.helath = helath;
+-    }
+-
+-    public String getGender() {
+-        return gender;
+-    }
+-
+-    public void setGender(String gander) {
+-        this.gender = gander;
+-    }
+-
+-    public String getPhoneNumber() {
+-        return phoneNumber;
+-    }
+-
+-    public void setPhoneNumber(String phoneNumber) {
+-        this.phoneNumber = phoneNumber;
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/Adapter.java
+===================================================================
+--- app/src/main/java/com/example/myproject/Adapter.java	(date 0)
++++ app/src/main/java/com/example/myproject/Adapter.java	(date 0)
+@@ -1,75 +0,0 @@
+-package com.example.myproject;
+-
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.EditText;
+-import android.widget.TextView;
+-
+-
+-import androidx.annotation.NonNull;
+-import androidx.recyclerview.widget.RecyclerView;
+-
+-import java.util.ArrayList;
+-
+-public class Adapter extends  RecyclerView.Adapter<Adapter.ViewHolder>{
+-
+-
+-    private ArrayList<User> user= new ArrayList<>();
+-
+-
+-    public Adapter(ArrayList<User> users){
+-        this.user=users;
+-    }
+-
+-
+-
+-
+-
+-    @NonNull
+-    @Override
+-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user,parent,false);
+-
+-        return new Adapter.ViewHolder(view);
+-
+-    }
+-
+-    @Override
+-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+-        holder.id.setText(user.get(position).getId());
+-        holder.name.setText(user.get(position).getName());
+-        holder.firstName.setText(user.get(position).getFirstName());
+-        holder.data.setText(user.get(position).getData());
+-        holder.helath.setText(user.get(position).getHelath());
+-        holder.gander.setText(user.get(position).getGender());
+-        holder.phoneNumber.setText(user.get(position).getPhoneNumber());
+-    }
+-
+-    @Override
+-    public int getItemCount() {
+-        return user.size();
+-    }
+-
+-
+-    public class ViewHolder extends RecyclerView.ViewHolder {
+-        public TextView id;
+-        public TextView name;
+-        public TextView firstName;
+-        public TextView data;
+-        public TextView helath;
+-        public TextView gander;
+-        public TextView phoneNumber;
+-        public ViewHolder(@NonNull View itemView)
+-        {
+-            super(itemView);
+-            id=itemView.findViewById(R.id.user_id);
+-            name=itemView.findViewById(R.id.user_name);
+-            firstName=itemView.findViewById(R.id.user_first);
+-            data=itemView.findViewById(R.id.user_data);
+-            helath=itemView.findViewById(R.id.user_health);
+-            gander=itemView.findViewById(R.id.user_gander);
+-            phoneNumber=itemView.findViewById(R.id.user_phone);
+-        }
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/First_Aid.java
+===================================================================
+--- app/src/main/java/com/example/myproject/First_Aid.java	(date 0)
++++ app/src/main/java/com/example/myproject/First_Aid.java	(date 0)
+@@ -1,53 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.Button;
+-
+-public class First_Aid extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_first__aid);
+-        final Button stoke=findViewById(R.id.stroke);
+-        Button burn=findViewById(R.id.burn);
+-        Button asthma=findViewById(R.id.asthma);
+-        Button bleed=findViewById(R.id.bleed);
+-        final Button hyperthmia=findViewById(R.id.hyperthrmia);
+-        stoke.setOnClickListener(new View.OnClickListener() {
+-
+-            @Override
+-            public void onClick(View v) {
+-startActivity(new Intent(First_Aid.this,First_Aid2.class));
+-            }
+-        });
+-        burn.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                startActivity(new Intent(First_Aid.this,BurnActivity.class));
+-            }
+-        });
+-        asthma.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                startActivity(new Intent(First_Aid.this,AsthmaActivity.class));
+-            }
+-        });
+-bleed.setOnClickListener(new View.OnClickListener() {
+-    @Override
+-    public void onClick(View v) {
+-        startActivity(new Intent(First_Aid.this,BleedActivity.class));
+-    }
+-});
+-hyperthmia.setOnClickListener(new View.OnClickListener() {
+-    @Override
+-    public void onClick(View v) {
+-        startActivity(new Intent(First_Aid.this,HyperthrmiaActivity.class));
+-    }
+-});
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/First_Aid2.java
+===================================================================
+--- app/src/main/java/com/example/myproject/First_Aid2.java	(date 0)
++++ app/src/main/java/com/example/myproject/First_Aid2.java	(date 0)
+@@ -1,28 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.os.Bundle;
+-import android.view.View;
+-
+-import android.widget.AdapterView;
+-import android.widget.ArrayAdapter;
+-import android.widget.Button;
+-import android.widget.Spinner;
+-
+-import java.util.ArrayList;
+-import java.util.List;
+-
+-public class First_Aid2 extends AppCompatActivity  {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_first__aid2);
+-
+-
+-
+-
+-    }
+-
+-}
+Index: app/src/main/java/com/example/myproject/BurnActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/BurnActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/BurnActivity.java	(date 0)
+@@ -1,14 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.os.Bundle;
+-
+-public class BurnActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.burn);
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/MainActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/MainActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/MainActivity.java	(date 0)
+@@ -1,276 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.net.Uri;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.AdapterView;
+-import android.widget.ArrayAdapter;
+-import android.widget.Button;
+-import android.widget.ImageButton;
+-import android.widget.Spinner;
+-import android.widget.Toast;
+-import android.content.SharedPreferences;
+-import com.google.android.gms.maps.MapView;
+-
+-import java.util.ArrayList;
+-import java.util.List;
+-
+-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+-    private Intent goToNextActivity;
+-    private Intent goNextActivity3;
+-    private SharedPreferences sp;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
+-        ImageButton madeButton = findViewById(R.id.madaButto);
+-        ImageButton policeButton = findViewById(R.id.policeButton);
+-        ImageButton macbiButton = findViewById(R.id.mcbiButton);
+-        ImageButton yedidimButton = findViewById(R.id.yedidim);
+-        ImageButton pepoleButton = findViewById(R.id.peopleButton);
+-        Button logoutButton = findViewById(R.id.logoutButton);
+-        final Button first_aid=findViewById(R.id.first_aid);
+-        first_aid.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                startActivity(new Intent(MainActivity.this,First_Aid.class));
+-            }
+-        });
+-        MapView map = findViewById(R.id.map);
+-        map.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                Intent goToNextActivity3 = new Intent(MainActivity.this, MapsActivity.class);
+-                startActivity(goToNextActivity3);
+-                finish();
+-            }
+-        });
+-        logoutButton.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                logout();
+-            }
+-        });
+-        yedidimButton.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                setTheCallYedidim();
+-
+-            }
+-        });
+-        macbiButton.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                setTheCallMacbi();
+-
+-
+-            }
+-        });
+-        policeButton.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                setThePhoneCallPolice();
+-
+-            }
+-        });
+-        madeButton.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                setThePhoneCallIntent();
+-
+-            }
+-        });
+-        pepoleButton.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                setCallPeople();
+-
+-            }
+-        });
+-
+-
+-        Spinner spiner = (Spinner) findViewById(R.id.madaSpinner);
+-        List<String> mada = new ArrayList<String>();
+-        mada.add("התקף לב");
+-        mada.add("תאונה");
+-        mada.add("לחץ דם");
+-        mada.add("שבץ מוחי");
+-        mada.add("דימום");
+-        mada.add("כויות");
+-        mada.add("מכת חום");
+-        mada.add("התקף אסטמה");
+-        mada.add("לידה");
+-        mada.add("אחר");
+-
+-        ArrayAdapter<String> eventAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mada);
+-        eventAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+-        spiner.setAdapter(eventAdapter);
+-        spiner.setSelection(0, false);
+-        spiner.setOnItemSelectedListener(this);
+-
+-        Spinner policespinner = findViewById(R.id.policeSpinner);
+-        List<String> police = new ArrayList<String>();
+-        police.add("תאונה");
+-        police.add("חטיפה");
+-        police.add("גניבה");
+-        police.add("אלימות");
+-        police.add("אחר");
+-        ArrayAdapter<String> eventAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, police);
+-        eventAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+-        policespinner.setAdapter(eventAdapter2);
+-        policespinner.setSelection(0, false);
+-        policespinner.setOnItemSelectedListener(this);
+-
+-        Spinner macbispinner = findViewById(R.id.mcbiSpinner);
+-        List<String> macbi = new ArrayList<String>();
+-        macbi.add("שריפה");
+-        macbi.add("בעל חיים תקוע");
+-        macbi.add("חילוץ");
+-        macbi.add("אחר");
+-        ArrayAdapter<String> eventAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, macbi);
+-        eventAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+-        macbispinner.setAdapter(eventAdapter3);
+-        macbispinner.setSelection(0, false);
+-        macbispinner.setOnItemSelectedListener(this);
+-
+-        Spinner yedidimspinner = findViewById(R.id.yedidimSpinner);
+-        List<String> yedidim = new ArrayList<String>();
+-        yedidim.add("החלפת גלגל");
+-        yedidim.add("התנעת רכב");
+-        yedidim.add("חילוץ");
+-        yedidim.add("רכב תקוע");
+-        yedidim.add("אחר");
+-        ArrayAdapter<String> eventAdapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, yedidim);
+-        eventAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+-        yedidimspinner.setAdapter(eventAdapter4);
+-        yedidimspinner.setSelection(0, false);
+-        yedidimspinner.setOnItemSelectedListener(this);
+-
+-        Spinner spinner = findViewById(R.id.peopleSpinner);
+-        List<String> people = new ArrayList<String>();
+-        people.add("אמא");
+-        people.add("אבא");
+-        people.add("אח/אחות");
+-        people.add("אחר");
+-        ArrayAdapter<String> eventAdapter5 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, people);
+-        eventAdapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+-        spinner.setAdapter(eventAdapter5);
+-        spinner.setSelection(0, false);
+-        spinner.setOnItemSelectedListener(this);
+-
+-
+-    }
+-
+-    @Override
+-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+-        String text = parent.getItemAtPosition(position).toString();
+-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+-
+-    }
+-
+-    @Override
+-    public void onNothingSelected(AdapterView<?> parent) {
+-
+-    }
+-
+-
+-    private void setThePhoneCallIntent() {
+-
+-        Intent phoneCall = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "101", null));
+-
+-        try {
+-            startActivity(phoneCall);
+-        } catch (Exception e) {
+-
+-        }
+-
+-    }
+-
+-
+-
+-    private void setThePhoneCallPolice() {
+-        Intent phoneCall = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "100", null));
+-
+-        finish();
+-        try {
+-            startActivity(phoneCall);
+-        } catch (Exception e) {
+-
+-        }
+-
+-    }
+-
+-
+-    public void setTheCallMacbi() {
+-        Intent phoneCall = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "102", null));
+-
+-        finish();
+-
+-        try {
+-            startActivity(phoneCall);
+-        } catch (Exception e) {
+-
+-        }
+-
+-    }
+-
+-
+-    public void setTheCallYedidim() {
+-        Intent phoneCall = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "053-3131310", null));
+-
+-        finish();
+-        try {
+-            startActivity(phoneCall);
+-        } catch (Exception e) {
+-
+-        }
+-
+-        Intent textMessage = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:053-3131310"));
+-        textMessage.putExtra("sms_body", "מקרה חירום ");
+-        try {
+-            startActivity(textMessage);
+-        } catch (Exception e) {
+-
+-        }
+-    }
+-
+-
+-
+-    public void setCallPeople() {
+-
+-        Intent phoneCall = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "", null));
+-
+-
+-        finish();
+-        try {
+-            startActivity(phoneCall);
+-
+-        } catch (Exception e) {
+-
+-        }
+-        Intent textMessage = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:0500000000"));
+-        textMessage.putExtra("sms_body", "מקרה חירום ");
+-        try {
+-            startActivity(textMessage);
+-        } catch (Exception e) {
+-
+-        }
+-
+-    }
+-    public void logout() {
+-        sp = getSharedPreferences("myProject",MODE_PRIVATE);
+-        SharedPreferences.Editor editor = sp.edit();
+-        editor.clear();
+-        editor.apply();
+-        // Go back to first activity
+-        startActivity(new Intent(this, FirstActivity.class));
+-        finish();
+-    }
+-
+-
+-}
+-
+Index: app/src/main/java/com/example/myproject/MapsActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/MapsActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/MapsActivity.java	(date 0)
+@@ -1,105 +0,0 @@
+-package com.example.myproject;
+-import androidx.core.app.ActivityCompat;
+-import androidx.fragment.app.FragmentActivity;
+-
+-import android.Manifest;
+-import android.content.Intent;
+-import android.content.pm.PackageManager;
+-import android.location.Location;
+-import android.location.LocationListener;
+-import android.location.LocationManager;
+-import android.os.Bundle;
+-
+-import com.google.android.gms.maps.CameraUpdateFactory;
+-import com.google.android.gms.maps.GoogleMap;
+-import com.google.android.gms.maps.OnMapReadyCallback;
+-import com.google.android.gms.maps.SupportMapFragment;
+-import com.google.android.gms.maps.model.LatLng;
+-import com.google.android.gms.maps.model.MarkerOptions;
+-
+-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+-    private LocationListener locationListener;
+-    private LocationManager locationManager;
+-
+-    private final long MIN_TIME = 3000; // 3 seconds
+-    private final long MIN_DIST = 5; // 5 Meters
+-
+-    private LatLng latLng;
+-    private GoogleMap mMap;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_maps);
+-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+-                .findFragmentById(R.id.map);
+-        mapFragment.getMapAsync(this);
+-
+-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PackageManager.PERMISSION_GRANTED);
+-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PackageManager.PERMISSION_GRANTED);
+-    }
+-
+-
+-    /**
+-     * Manipulates the map once available.
+-     * This callback is triggered when the map is ready to be used.
+-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+-     * we just add a marker near Sydney, Australia.
+-     * If Google Play services is not installed on the device, the user will be prompted to install
+-     * it inside the SupportMapFragment. This method will only be triggered once the user has
+-     * installed Google Play services and returned to the app.
+-     */
+-    @Override
+-    public void onMapReady(GoogleMap googleMap) {
+-        mMap = googleMap;
+-
+-        // Add a marker in Sydney and move the camera
+-        LatLng sydney = new LatLng(-34, 151);
+-        mMap.addMarker(new MarkerOptions().position(sydney).title("המיקום שלי"));
+-
+-
+-        locationListener = new LocationListener() {
+-            @Override
+-            public void onLocationChanged(Location location) {
+-                try {
+-                    latLng = new LatLng(location.getLatitude(), location.getLongitude());
+-
+-                    mMap.addMarker(new MarkerOptions().position(latLng).title("המיקוד שלי"));
+-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+-                } catch (SecurityException e) {
+-                    e.printStackTrace();
+-                }
+-            }
+-
+-            @Override
+-            public void onStatusChanged(String provider, int status, Bundle extras) {
+-
+-            }
+-
+-            @Override
+-            public void onProviderEnabled(String provider) {
+-
+-            }
+-
+-            @Override
+-            public void onProviderDisabled(String provider) {
+-
+-            }
+-        };
+-
+-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+-        try {
+-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME, MIN_DIST, locationListener);
+-        }
+-        catch (SecurityException e){
+-            e.printStackTrace();
+-        }
+-
+-    }
+-    }
+-
+-
+-
+-
+-
+Index: app/src/main/java/com/example/myproject/BleedActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/BleedActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/BleedActivity.java	(date 0)
+@@ -1,14 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.os.Bundle;
+-
+-public class BleedActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_bleed);
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/FirstActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/FirstActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/FirstActivity.java	(date 0)
+@@ -1,71 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.content.SharedPreferences;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.Button;
+-import android.widget.EditText;
+-import android.widget.Toast;
+-
+-public class FirstActivity extends AppCompatActivity {
+-private Intent goNextActivity2,startNext;
+-private EditText phone;
+-private  EditText name;
+-    private SharedPreferences sp;
+-    public static final String EXTRA_PhoneNumber="com.example.intent_with_extra.EXTRA_PhoneNumber";
+-    protected void onCreate(final Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        sp = getSharedPreferences("myProject",MODE_PRIVATE);
+-        setContentView(R.layout.activity_first);
+-        Button button = findViewById(R.id.join);
+-        phone = findViewById(R.id.name);
+-        name = findViewById(R.id.userName);
+-
+-        button.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                if (phone.length() == 10 && name.length() > 0) {
+-
+-                setTheShare();
+-                    Intent goToNextActivity2 = new Intent(FirstActivity.this,Shared_perference.class);
+-                    startActivity(goToNextActivity2);
+-                    finish();
+-                } else {
+-                    Toast.makeText(FirstActivity.this, "phoneNumber ", Toast.LENGTH_LONG).show();
+-                }
+-
+-            }
+-        });
+-
+-        // Checking if details are already saves in the system.
+-        // If so, moving to main activity
+-        checkForSavedDetails();
+-    }
+-
+-    private void checkForSavedDetails() {
+-        sp = getSharedPreferences("myProject",MODE_PRIVATE);
+-        if (sp.contains("user_name") && sp.contains("phone_number")) {
+-            startActivity(new Intent(this, MainActivity.class));
+-            finish();
+-        }
+-    }
+-
+-    public void setTheShare(){
+-        SharedPreferences.Editor editor = sp.edit();
+-        editor.putString("user_name",name.getText().toString()).apply();
+-        editor.putString("phone_number",name.getText().toString()).apply();
+-        editor.apply();
+-    }
+-
+-
+-    }
+-
+-
+-
+-
+-
+-
+-
+Index: app/src/main/java/com/example/myproject/AsthmaActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/AsthmaActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/AsthmaActivity.java	(date 0)
+@@ -1,14 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.os.Bundle;
+-
+-public class AsthmaActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.asthma);
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/HyerthActivity.java
+===================================================================
+--- app/src/main/java/com/example/myproject/HyerthActivity.java	(date 0)
++++ app/src/main/java/com/example/myproject/HyerthActivity.java	(date 0)
+@@ -1,14 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.os.Bundle;
+-
+-public class HyerthActivity extends AppCompatActivity {
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_hyerth);
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/ShowFireBaseData.java
+===================================================================
+--- app/src/main/java/com/example/myproject/ShowFireBaseData.java	(date 0)
++++ app/src/main/java/com/example/myproject/ShowFireBaseData.java	(date 0)
+@@ -1,63 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.annotation.NonNull;
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.recyclerview.widget.LinearLayoutManager;
+-import androidx.recyclerview.widget.RecyclerView;
+-
+-import android.content.SharedPreferences;
+-import android.os.Bundle;
+-import android.util.Log;
+-import android.widget.EditText;
+-
+-import com.google.android.gms.tasks.OnCompleteListener;
+-import com.google.android.gms.tasks.Task;
+-import com.google.firebase.firestore.DocumentSnapshot;
+-import com.google.firebase.firestore.FirebaseFirestore;
+-
+-import java.util.ArrayList;
+-
+-public class ShowFireBaseData extends AppCompatActivity {
+-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+-    ArrayList<User> userArray = new ArrayList<>();
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_show_fire_base_data);
+-        final EditText  PhoneNumber=findViewById(R.id.PhoneNumber);
+-        SharedPreferences sp = getSharedPreferences("myProject", MODE_PRIVATE);
+-        final String phoneNumber = sp.getString("phone_number", null);
+-
+-        db.collection(Shared_perference.nameOfCollection).document(phoneNumber).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+-
+-            @Override
+-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+-
+-                if (task.isSuccessful()) {
+-                    DocumentSnapshot document = task.getResult();
+-
+-                    if (document.exists()) {
+-                        Log.d("", "DocumentSnapshot data: " + document.getData());
+-User user=document.toObject(User.class);
+-
+-                        loadRecyclerView(userArray);
+-                    } else {
+-                        Log.d("", "No such document");
+-                    }
+-                } else {
+-                    Log.d("", "get failed with ", task.getException());
+-                }
+-            }
+-        });
+-    }
+-
+-    private void loadRecyclerView(ArrayList<User> arrayList) {
+-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+-        layoutManager.setSmoothScrollbarEnabled(true);
+-        RecyclerView recyclerView = findViewById(R.id.data_user);
+-        recyclerView.setLayoutManager(layoutManager);
+-         Adapter adapter = new Adapter(arrayList);
+-        recyclerView.setAdapter(adapter);
+-    }
+-}
+Index: app/src/main/java/com/example/myproject/Shared_perference.java
+===================================================================
+--- app/src/main/java/com/example/myproject/Shared_perference.java	(date 0)
++++ app/src/main/java/com/example/myproject/Shared_perference.java	(date 0)
+@@ -1,58 +0,0 @@
+-package com.example.myproject;
+-
+-import androidx.annotation.NonNull;
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.util.Log;
+-import android.view.View;
+-import android.widget.Button;
+-import android.widget.EditText;
+-import android.widget.Toast;
+-
+-import com.google.android.gms.tasks.OnFailureListener;
+-import com.google.android.gms.tasks.OnSuccessListener;
+-import com.google.firebase.firestore.FirebaseFirestore;
+-
+-public class Shared_perference extends AppCompatActivity {
+-    public static String nameOfCollection = "user";
+-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_shared_preferences);
+-
+-        Button button = findViewById(R.id.sent);
+-        button.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                startActivity(new Intent(Shared_perference.this, ShowFireBaseData.class));
+-
+-                EditText id = findViewById(R.id.id);
+-                EditText name = findViewById(R.id.Name);
+-                EditText firstName = findViewById(R.id.FirstName);
+-                EditText helath = findViewById(R.id.Health);
+-                EditText gender = findViewById(R.id.Gander);
+-                EditText data = findViewById(R.id.data);
+-                EditText phoneNumber = findViewById(R.id.PhoneNumber);
+-                User user = new User(id.getText().toString(), name.getText().toString(), firstName.getText().toString(), helath.getText().toString(), gender.getText().toString(), data.getText().toString(), phoneNumber.getText().toString());
+-
+-                db.collection(nameOfCollection).document(phoneNumber.getText().toString()).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+-                    @Override
+-                    public void onSuccess(Void aVoid) {
+-                        Toast.makeText(Shared_perference.this,"עודכן בהצלחה",Toast.LENGTH_SHORT).show();
+-
+-                    }
+-
+-                }).addOnFailureListener(new OnFailureListener() {
+-                    @Override
+-                    public void onFailure(@NonNull Exception e) {
+-                        Log.w("", "error writing document", e);
+-                    }
+-                });
+-            }
+-        });
+-    }
+-}

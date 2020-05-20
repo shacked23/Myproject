@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".First_Aid">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="145dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="עזרה ראשונה טרם הגעת מדא"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/stroke"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/stoke"
+            android:text="שבץ מוחי"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/widget_edittext_dark" />
+
+        <Button
+            android:id="@+id/burn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/butn"
+            android:text="כויות"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/asthma"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/astma"
+            android:text="אסטמה"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/bleed"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/bleed"
+            android:text="דימום"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/widget_edittext_dark" />
+
+        <Button
+            android:id="@+id/hyperthrmia"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/hyperthermia"
+            android:text=" מכת חום"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

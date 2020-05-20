@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".First_Aid2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="אם יש חולשה בצד אחד של הפנים, האם אדם יכול להרים את שתי ידיו באופן שווה ,האם ניתן להבין בקלות את דיבורו של אדם"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="אם מופיע אחד  מן הסימנים יש חשש שהאדם סובל משבץ מוחי שבץ מוחי נגרם כתוצה מהפרעה באספקת דם למוח חלק מהמוח נפגע ולכן יכול להיות לכך השפעה על מראהו של האדם" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="הזעק את מדא חייג 101 מיד או בקש ממישהו אחר לעשות זאת   "
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="הטיפול בשבץ מוחי חייב להיות מהיר ככל האפשר ככל שהאדם יקבל טיפול רפואי מהר יותר כך יקטן הנזק המוחי" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="דבר עם האדם והרגע אותו בזמן ההמתנה לצוות מדא"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שאלות ותשובות"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="מהם התסמינים שיכולים להופיע אצל אדם הסובל משבץ מוחי"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:text="התסמינים הנוספים הם חוסר תחושה בצד אחד של הגוף ראייה מטושטשת כאב ראש עז ופתאומי סחרחורת איבוד שיוי משקל קןשי בדיבור או בהבנת הסובבים" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="מדוע שבץ מוחי יתבטא רק בצד אחד של הגוף"
+            android:textSize="18sp"
+            app:autoSizeTextType="uniform" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="חצי מהמוח שולט על צד אחד של הגוף בשעה שחציו השני שולט על הצד השני של הגוף מאחר ובעייה באספקת הדם למוח משפיעה רק על צד אחד של המוח רק צד אחד של המוח וצד אחד של הגוף יושפעו מעבר לכך אצל אנשים רביים מרכז הדיבור קשור לצד שמרל של המוח קרוב למרכז השליטה על הפעילות המוטרית בצד ימין של הגוף שבץ מוחי המתבטא ביד ימין בעיות בדיבור הוא שכיח" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

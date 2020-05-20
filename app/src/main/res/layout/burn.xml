@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BurnActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="קרר את אזור הכוויה מתחת למים זורמים קריריים במשך 1 1 10 דקות לפחות"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הקירור יפחית את הכאב את הנפיחות והופעת הצלקות ככל שהקירור באמצעות מים יעשה מהר יותר ולאורך זמן אזור הכוויה יחלים מהר יותר" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="במקרה הצורך הזעק את מדא חייג 101 או בקש ממישהו אחר לעשות זאת"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הזעק את מדא חייג  101 בכל מקרה של כוייה בילד בכל מקרה ששלפוחיות מופיעות ביותר מאזור אחד בגוף בכל מקרה ששלפוחיות מופיעות באזור הפנים הרגליים או המפרקים ובכל מקרה בו העור התקלף לחלוטין" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="שאלות ותשובות"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="האם כדאי למרוח חמאה או קרם על הכוויה "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="לא חמאה אינה מקררת את אזור הכוויה כל סוגי השמן משמרים חום בניגוד למה שאתה מנסה להשיג אם מורחים חמאה או כול חומר אחר על אזור הכוויה הם עלולים לגרום לכאב נוסף " />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="האם כדאי להניח קרח על מנת לקרר את אזור הכוויה"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="לא השתמש במים בלבד קרח עלול לגרום נזק נוסף לעור אם אין ברשותך מים השתמש בנוזל קריר אחר" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="האם עלי להניח תחבושת על אזור הכוויה"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="לא אל תניח תחבושת משום שהיא עלולה להידבק לעור ניתן להשתמש בתחבושת יעודית לכויות הנמצאת בערכת עזרה ראשונה ." />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

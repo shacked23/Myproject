@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BleedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="הפעל לחת על מקום הפציעה בכל אמצעי אפשרי על מנת להפסיק או להאט את זרימת הדם"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:text="הלחץ אותו אתה מפעיל יסייע לתהליך הקרישה ויפסיק את הדימום"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="אם הדימום חמור הזעק את מדא חייג   101 מוקדם ככל האפשר "
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="המשך בהפעלת לחץ על מקום הפציעה עד להגעת צוות מדא"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="שאלות ותשובות"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="במה אני יכול להשתמש על מנת להפעיל לחץ על הפצע"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="השתמש בכל חתיכת בד על מנת שתמצא אין בהכרח שתהיה תחבושת סטרילית מתוך ערכת עזרה ראשונה ניתן להפעיל לחץ באמצעות היד שלך חולצת טריקו מגבת או כל מה שניתן ללחוץ באמצעותו על הפצע על מנת לעצור או להאט את זרימת הדם" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="מה עלי לעשות אם חתיכת הבד בה השתמשתי ספוגה כולה בדם"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="אל תסיר את חתיכת הבד הסופגה אלא הוסף מעליה חתיכת בד נוספת  והמשך להפעיל לחץ על הפצע והזעק ככול האפשר את מדא" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="האדם נראה חיוור ומרגיש קור וצמרמורת ומתלונן על סחרחורת מה המשמעות"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="המשמעות היא כי זרימת הדם בגוף אינה מספיקה זהו מצב מסכן חיים עלול לגרום לבעיות רפואיות נוספות כמו מחסור בחמצן התקף לב ופגיעה באיבריים " />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="מה עלי לעשות אם יש גוף זר הנעוץ בפצע"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="אל תשלוף את הגוף זר מאחר והוא משמש כפקק החוסם את החור ועוצר הדימום במקום זאת הפעל לחץ מסביב לגוף הזר שליפת הגוף זר עלולה להגביר את זרימת הדם" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

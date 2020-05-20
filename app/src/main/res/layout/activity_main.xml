@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alwaysDrawnWithCache="true"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/background2"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/policeButton"
+        android:layout_width="137dp"
+        android:layout_height="122dp"
+        android:background="@mipmap/ic_police_foreground"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/madaButto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093"
+        app:srcCompat="@mipmap/ic_police_round" />
+
+
+    <ImageButton
+        android:id="@+id/mcbiButton"
+        android:layout_width="137dp"
+        android:layout_height="122dp"
+        android:background="@mipmap/ic_mcbi"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        app:srcCompat="@mipmap/ic_mcbi_round" />
+
+    <ImageButton
+        android:id="@+id/madaButto"
+        android:layout_width="137dp"
+        android:layout_height="122dp"
+        android:background="@mipmap/ic_launcher_foreground"
+        android:backgroundTint="@android:color/background_light"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageButton
+        android:id="@+id/peopleButton"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="69dp"
+        android:layout_height="78dp"
+        android:background="@mipmap/ic_people"
+        android:backgroundTint="@android:color/background_light"
+        android:onClick="People"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649"
+        app:srcCompat="@mipmap/ic_people_round"
+        tools:ignore="OnClick" />
+
+    <ImageButton
+        android:id="@+id/yedidim"
+        android:layout_width="137dp"
+        android:layout_height="122dp"
+        android:background="@mipmap/ic_yedidim"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437"
+        app:srcCompat="@mipmap/ic_yedidim_round" />
+
+    <Spinner
+        android:id="@+id/madaSpinner"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:popupBackground="@android:color/holo_blue_dark"
+        android:prompt="@string/spinner_title"
+        app:layout_constraintBottom_toTopOf="@+id/yedidim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/madaButto"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/policeSpinner"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:popupBackground="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/mcbiButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.729"
+        app:layout_constraintStart_toEndOf="@+id/spinne"
+        app:layout_constraintTop_toBottomOf="@+id/policeButton"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="NotSibling,UnknownId" />
+
+    <Spinner
+        android:id="@+id/mcbiSpinner"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:popupBackground="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcbiButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/yedidimSpinner"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:popupBackground="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mcbiSpinner"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yedidim"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/peopleSpinner"
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="180dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:popupBackground="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peopleButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView2"
+        android:layout_width="123dp"
+        android:layout_height="94dp"
+        android:src="@drawable/police"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="57dp"
+        android:layout_height="56dp"
+        android:background="@drawable/image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="התנתק"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <Button
+        android:id="@+id/first_aid"
+        android:layout_width="110dp"
+        android:layout_height="36dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="עזרה ראשונה"
+        app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintVertical_bias="0.735" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

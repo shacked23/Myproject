@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">My project</string>
+    <string name="spinner_title" />
+    <string-array name="event">
+        <item name="התקף לב"></item>
+        <item name="תאונה"></item>
+        <item name="לחץ דם"></item>
+        <item name="שבץ מוחי"></item>
+        <item name="כוויות"></item>
+        <item name="לידה"></item>
+        <item name="התקף אסטמה"></item>
+        <item name="אחר"></item>
+    </string-array>
+
+    <string-array name="event2">
+        <item name="תאונה"> </item>
+        <item name="חטיפה"> </item>
+        <item name="גניבה"> </item>
+        <item name="אלימות"> </item>
+        <item name="אחר"></item>
+    </string-array>
+    <string-array name="event3">
+        <item name="שריפה"> </item>
+        <item name="בעל חיים תקוע"> </item>
+        <item name="חילוץ"> </item>
+        <item name="אחר"></item>
+    </string-array>
+    <string-array name="event4">
+        <item name="החלפת גלגל"> </item>
+        <item name="הנעת רכב"> </item>
+        <item name="רכב תקוע"></item>
+        <item name="חילוץ"> </item>
+
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_bleed">BleedActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+</resources>
