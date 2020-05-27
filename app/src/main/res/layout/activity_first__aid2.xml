@@ -16,8 +16,8 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="אם יש חולשה בצד אחד של הפנים, האם אדם יכול להרים את שתי ידיו באופן שווה ,האם ניתן להבין בקלות את דיבורו של אדם"
+            android:layout_height="95dp"
+            android:text="אם יש חולשה בצד אחד של הפנים האם אדם יכול להרים את שתי ידיו באופן שווה האם ניתן להבין בקלות את דיבורו של אדם"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/holo_red_dark" />
 
