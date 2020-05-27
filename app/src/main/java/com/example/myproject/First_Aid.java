@@ -18,6 +18,7 @@ public class First_Aid extends AppCompatActivity {
         Button asthma=findViewById(R.id.asthma);
         Button bleed=findViewById(R.id.bleed);
         Button hyperthermia=findViewById(R.id.hyperthrmia);
+        Button resucitation=findViewById(R.id.resucitation);
         stoke.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -49,5 +50,11 @@ startActivity(new Intent(First_Aid.this,First_Aid2.class));
                 startActivity(new Intent(First_Aid.this,Heat_Stoke_Activity.class));
             }
         }) ;
+        resucitation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(First_Aid.this,ResuscitationActivity.class));
+            }
+        });
     }
 }
