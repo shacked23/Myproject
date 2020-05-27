@@ -63,11 +63,14 @@
             android:text=" מכת חום"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/imageView4"
+        <Button
+            android:id="@+id/resucitation"
             android:layout_width="match_parent"
-            android:layout_height="193dp"
-            android:src="@drawable/giphy" />
+            android:layout_height="58dp"
+            android:background="@drawable/unconscious"
+            android:text="מחוסר הכרה"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textDirection="firstStrongRtl" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
